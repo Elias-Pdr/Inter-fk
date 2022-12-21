@@ -3,16 +3,16 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    max-width: 286px;
+    max-width: 434px;
 }
 body{
     background-color: aqua;
-    width: 286px;
+    width: 434px;
     color: gray;
     font-family: 'Sora', sans-serif;
 }
 .guia{
-    width: 286px;
+    width: 434px;
     position: absolute;
     z-index: -10;
     opacity: 1;
