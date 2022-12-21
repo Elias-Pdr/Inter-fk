@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 460px;
+}
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    max-width: 460px;
+    max-width: var(--largura);
 }
 body{
     background-color: aqua;
-    width: 460px;
+    width: var(--largura);
     color: gray;
     font-family: 'Sora', sans-serif;
 }
 .guia{
-    width: 460px;
+    width: var(--largura);
     position: absolute;
     z-index: -10;
     opacity: 1;
