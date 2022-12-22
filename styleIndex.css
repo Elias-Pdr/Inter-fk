@@ -11,7 +11,7 @@
 body{
     background-color: aqua;
     width: var(--largura);
-    color: gray;
+    color: black;
     font-family: 'Sora', sans-serif;
 }
 .guia{
@@ -28,15 +28,13 @@ body{
     z-index: -1;
     display: block;
 }
-img{
-    opacity: .5;
-}
+
 header{
     color: black;
 }
 header img,
 .btnMain{
-    opacity: 1;
+    opacity: 1.5;
 }
 .headerSuperior{
     padding: 27px 22px;
@@ -63,6 +61,7 @@ header img,
     font-size: 9px;
     margin-bottom: 17px;
     color: #ff7a01;
+    font-weight: bold;
 }
 .headerInferior{
     display: flex;
@@ -78,7 +77,21 @@ header img,
     align-items: center;
     border-radius: 7px;
     overflow: hidden;
+    border: 1px solid #dfdee3;
 }
+.hoverBtnMain{
+    width: 129px;
+    height: 129px;
+    background-color: black;
+    position: absolute;
+    border-radius: 7px;
+    opacity: 0;
+}
+.hoverBtnMain:hover{
+    opacity: .1;
+}
+
+
 .btnMain:nth-child(2){
     margin: 0px 8px;
 }

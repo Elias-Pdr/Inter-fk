@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styleIndex.css">
 </head>
 <body onload="start()">
-    <img class="guia" src="img/imgIndex/guai1.jpg" alt="">
+    <img class="guia" src="img/imgIndex/guai2.jpg" alt="">
     <div class="corFundo"></div>
     <header>
         <div class="headerSuperior">
@@ -24,16 +24,19 @@
         </div>
         <div class="headerInferior">
             <div class="btnMain">
+                <div class="hoverBtnMain"></div>
                 <img class="imgSize" src="img/imgIndex/index_0004_Camada-4.png" alt="">
                 <p>Cartões</p>
             </div>
 
-            <div class="btnMain">
+            <div class="btnMain" onclick="window.location.href='pix.html'">
+                <div class="hoverBtnMain"></div>
                 <img class="imgSize" src="img/imgIndex/index_0003_Camada-5.png" alt="">
                 <p>Pix</p>
             </div>
 
             <div class="btnMain">
+                <div class="hoverBtnMain"></div>
                 <img class="imgSize" src="img/imgIndex/index_0002_Camada-6.png" alt="">
                 <p>Investir</p>
             </div>
@@ -42,18 +45,7 @@
     </header>
 
 
-    <script>
-
-        function start() {
-            let imgSize = document.querySelectorAll(".imgSize")
-
-            for (let i = 0; i < imgSize.length; i++) {
-                imgSize[i].width = (imgSize[i].width * 450) / 720
-            }
-        }
-
-
-    </script>
+    <script src="controllerSizeImg.js"></script>
 </body>
 
 </html>

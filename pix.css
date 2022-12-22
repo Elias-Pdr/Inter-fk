@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 450px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    max-width: var(--largura);
+}
+body{
+    background-color: aqua;
+    width: var(--largura);
+    color: black;
+    font-family: 'Sora', sans-serif;
+}
+.guia{
+    width: var(--largura);
+    position: absolute;
+    z-index: -10;
+    opacity: 1;
+}
+img{
+    opacity: 1;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header p{
+    margin: -23px -27px 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.containerPagarReceber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -1px 24px 19px 24px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #dfdee3;
+    overflow: hidden;
+}
+.hoverBtn{
+    width: 402px;
+    height: 61.85px;
+    background-color: black;
+    position: absolute;
+    border-radius: 8px;
+    opacity: 0;
+}
+.hoverBtn:hover{
+    opacity: .1;
+}
+
+.containerPagarReceber span{
+    display: flex;
+    align-items: center;
+}
+.containerPagarReceber img{
+    margin-left: 4px;
+}
+.containerPagarReceber p{
+    font-size: 10px;
+}
+.containerBtn{
+    display: flex;
+    margin: 66px 16px 21px 28px;
+}
+.btn {
+    width: 56px;
+    height: 54px;
+    background-color: blueviolet;
+    opacity: 0;
+    margin: 0px 16px 0px 0px;
+}
