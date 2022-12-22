@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 450px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    max-width: var(--largura);
+}
+body{
+    background-color: aqua;
+    width: var(--largura);
+    color: black;
+    font-family: 'Sora', sans-serif;
+}
+.guia{
+    width: var(--largura);
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+img{
+    opacity: 1;
+}
+
+.hoverBtn{
+    opacity: .5;
+    border-radius: 9px;
+}
+.hoverBtn:hover{
+    background-color: black;
+    opacity: .1;
+    border-radius: 9px;
+}
+
+
+.voltar{
+    width: 87px;
+    height: 71px;
+    margin: 0px 0px 9px 0px;
+}
+.chaves{
+    width: 402px;
+    height: 81px;
+    margin: 0px 0px 59px 24px;
+}
+.containerBtn{
+    display: flex;
+    justify-content: space-between;
+    width: 402px;
+    height: 126px;
+    margin: 0px 0px 59px 24px;
+}
+.btn{
+    min-width: 126px;
+    min-height: 20px;
+}
+
+.containerFav{
+    margin: 0px 24px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dedfe4;
+    margin-bottom: 15px;
+}
+.containerFav span{
+    margin: 10px 0px;
+}
+.containerFav img{
+
+}
+.containerFav p:nth-child(1){
+    font-size: 11px;
+    margin: 0px 0px 6px 0px;
+    font-weight: bold;
+}
+.containerFav p:nth-child(2){
+    font-size: 10px;
+    margin: 0px 0px 5px 0px;
+    opacity: .8;
+}
+.containerFav p:nth-child(3){
+    font-size: 9px;
+    margin: -2px 0px 13px 0px;
+    opacity: .7;
+
+}
+
