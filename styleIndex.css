@@ -23,9 +23,10 @@ body{
 .corFundo{
     background-color: white;
     width: 100%;
-    height: 316px;
+    height: 198px;
     position: absolute;
     z-index: -1;
+    display: block;
 }
 img{
     opacity: .5;
@@ -33,20 +34,21 @@ img{
 header{
     color: black;
 }
-header img{
+header img,
+.btnMain{
     opacity: 1;
 }
 .headerSuperior{
-    padding: 45px 36px;
+    padding: 27px 22px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.saldo{
-    font-size: 26px;
+.saldo {
+    font-size: 17px;
     font-weight: bold;
-    margin: 9px 0px 0px 38px;
+    margin: 6px 0px 0px 23px;
 }
 .headerCentral span{
     display: flex;
@@ -57,34 +59,34 @@ header img{
 }
 .verExtrato{
     width: fit-content;
-    padding: 22px 17px 16px 38px;
-    font-size: 15px;
-    margin-bottom: 30px;
+    padding: 15px 13px 13px 24px;
+    font-size: 9px;
+    margin-bottom: 17px;
     color: #ff7a01;
-
 }
 .headerInferior{
     display: flex;
     width: 100%;
-    margin: 0px 36px;
+    margin: 0px 23px;
 }
 .btnMain{
     background-color: white;
-    width: 207px;
-    height: 207px;
+    width: 129px;
+    height: 129px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 14px;
+    border-radius: 7px;
     overflow: hidden;
 }
 .btnMain:nth-child(2){
-    margin: 0px 13px;
+    margin: 0px 8px;
 }
 .btnMain p{
-    font-size: 15px;
+    font-size: 10px;
     font-weight: bold;
 }
 .expandirMenu{
-    margin: 2px 36px;
+    margin: 10px 85px;
+    scale: 1.3;
 }
