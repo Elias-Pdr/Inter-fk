@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 450px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    max-width: var(--largura);
+}
+body{
+    background-color: rgb(110, 3, 3);
+    width: var(--largura);
+    color: black;
+    font-family: 'Sora', sans-serif;
+}
+.main{
+    height: 1064px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.guia{
+    width: var(--largura);
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.volta{
+    width: 60px;
+    height: 60px;
+}
+.home{
+    width: 60px;
+    height: 60px;
+}
+.containerValor{
+    text-align: center;
+    margin: 125px 0px 10px 0px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.containerinfos,
+.containerinfos2{
+    text-align: end;
+    margin: 91px 24px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.containerinfos p,
+.containerinfos2 p{
+        margin-bottom: 19px;
+}
+.containerinfos{
+    margin-bottom: 135px;
+}
+footer{
+    text-align: center;
+}
+.compartBtn{
+    margin: 58px 10px 10px 10px;
+    padding: 15px 131px;
+    border: none;
+    background-color: #ff7a01;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}

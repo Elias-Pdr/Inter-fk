@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <link rel="stylesheet" href="revisao.css">
+</head>
+<body>
+    <body onload="start()">
+        <img class="guia" src="img/imgRevisão/guia1.jpg" alt=""> 
+    
+        <div class="main">
+            <main>
+                <div class="volta" onclick="window.location.href='pixComChave2.html'"></div>
+                <div class="containerSaldo">
+                    <p class="rs">R$</p>
+                    <p class="saldo">4,49</p>
+                </div>
+                <div class="containerPreco">
+                    <p class="valorAPagar">Valor a pagar</p>
+                    <span class="containerInputPreco">
+                        <label for="valor" class="rsInput">R$</label>
+                        <p class="input" name="valor" id="valor" >0,01</p>
+                    </span>
+                </div>
+
+                <div class="containerInformacoes">
+                    <p class="title">Chave de Celular</p>
+                    <p class="info">(24) 99842-8760</p>
+
+                    <p class="title">Nome</p>
+                    <p class="info">Ana Andreia Jerusaleno Mesquita</p>
+
+                    <p class="title">CPF/CNPJ</p>
+                    <p class="info">***.858.957-**</p>
+
+                    <p class="title">Instituição</p>
+                    <p class="info">Banco Inter S.A.</p>
+
+                    <p class="title">Descrição</p>
+                    <p class="info">Não informado</p>
+                </div>
+
+            </main>
+            <footer>
+                <button class="button" onclick="pagar()">PAGAR</button>
+            </footer>
+        </div>
+
+        <div class="iSafe">
+            <div class="shadow"></div>
+            <span>
+                <div class="puxador"></div>
+                <p>Clique em confirmar para autenticar sua transição pelo iSafe</p>
+                <button class="button btnHover" onclick="window.location.href='comprovante.html'">confirmar</button>
+            </span>
+        </div>
+    
+    
+        <script src="controllerSizeImg.js"></script>
+        <script>
+            function pagar() {
+                document.querySelector(".iSafe").style.display = "flex"
+            }
+        </script>
+    
+    </body>
+    
+</body>
+</html>
