@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 450px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    max-width: var(--largura);
+}
+body{
+    background-color: rgb(255, 255, 255);
+    width: var(--largura);
+    color: black;
+    font-family: 'Sora', sans-serif;
+}
+.guia{
+    width: var(--largura);
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.contianerChave{
+    margin: -3px 16px 3px 16px;
+    border-top: 1px solid #e8e7ec;
+}
+.contianerChave span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contianerChave p{
+    font-size: 10px;
+    margin: 2px 0px 0px 0px;
+    color: #4d4d59;
+}
+.contianerChave img{
+    margin: 0px 0px;
+}
+.check{
+    display: none;
+}
+.inputs{
+    width: 100%;
+    padding: 16px 15px;
+    margin: 7px 0px 12px 0px;
+    font-size: 13px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f5f6fa;
+    color: #787980;
+    outline: none;
+    display: none;
+}
+footer button{
+    margin: 0px 0px 40px 0px;
+    padding: 16px 71px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #ebecf1;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer button:hover {
+    color: white;
+    background-image: linear-gradient(90deg, #ff520e, #ff8500);
+}
+.main{
+    height: 913px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.volta{
+    width: 60px;
+    height: 50px;
+    position: absolute;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix com chave 2</title>
+    <link rel="stylesheet" href="pixComChave2.css">
+</head>
+<body onload="start()">
+    <img class="guia" src="img/imgPixComChave2/guia2.png" alt=""> 
+
+    <div class="main">
+        <main>
+            <div class="volta" onclick="window.location.href='pixComChave.html'"></div>
+            <div class="containerSaldo">
+                <p class="rs">R$</p>
+                <p class="saldo">4,49</p>
+            </div>
+            <div class="containerPreco">
+                <p class="valorAPagar">Valor a pagar</p>
+                <span class="containerInputPreco">
+                    <label for="valor" class="rsInput">R$</label>
+                    <input class="input" type="number" name="valor" id="valor" placeholder="0,00">
+                </span>
+            </div>
+            <div class="containerDescrisao">
+                <label for="descricao">Descrição (opcional)</label>
+                <input type="text" name="descricao" id="descricao" placeholder="Pagamento">
+            </div>
+        </main>
+        <footer>
+            <button onclick="window.location.href='pixComChave2.html'">continuar</button>
+        </footer>
+    </div>
+
+
+    <script src="controllerSizeImg.js"></script>
+
+</body>
+</html>
