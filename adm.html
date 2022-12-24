@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body onload="start()">
+    <header>
+        <img onclick="window.location.href='index.html'" class="imgSize" src="img/imgPix/pix_0010_Camada-1.png" alt="">
+        <p>ADM</p>
+    </header>
+    <main>
+        <div class="containerSaldo">
+            <p>Total em conta</p>
+            <input type="number" name="saldo" id="saldo" placeholder="R$ 0,00">
+        </div>
+
+        <div class="containerInput">
+            <label for="myName">Meu nome</label>
+            <input type="text" name="myName" id="myName">
+        </div>
+
+        <div class="containerInput">
+            <label for="myCpf">Meu CPF</label>
+            <input type="text" name="myCpf" id="myCpf">
+        </div>
+
+        <div class="containerInput">
+            <label for="myBanco">Meu banco</label>
+            <input type="text" name="myBanco" id="myBanco">
+        </div>
+        <br>
+        <br>
+        <div class="containerInput">
+            <label for="nome">Nome da vitima</label>
+            <input type="text" name="vitName" id="vitName">
+        </div>
+
+        <div class="containerInput">
+            <label for="cpf">CPF da vitima</label>
+            <input type="text" name="cpf" id="cpf">
+        </div>
+
+        <div class="containerInput">
+            <label for="banco">Banco da vitima</label>
+            <input type="text" name="banco" id="banco">
+        </div>
+        <br>
+        <br>
+
+        <button onclick="salvar()" class="compartBtn">Salvar e sair</button>
+    </main>
+
+    <script src="controllerSizeImg.js"></script>
+    <script src="controller.js"></script>
+    <script>
+
+        let input_saldo = document.getElementById("saldo")
+        let input_myName = document.getElementById("myName")
+        let input_myCpf = document.getElementById("myCpf")
+        let input_myBanco = document.getElementById("myBanco")
+
+        let input_vitName = document.getElementById("vitName")
+        let input_cpf = document.getElementById("cpf")
+        let input_banco = document.getElementById("banco")
+
+        function salvar() {
+            localStorage.setItem("saldo", input_saldo.value);
+            localStorage.setItem("myName", input_myName.value);
+            localStorage.setItem("myCpf", "***." + input_myCpf.value + "-**");
+            localStorage.setItem("myBanco", input_myBanco.value);
+
+            localStorage.setItem("vitName", input_vitName.value);
+            localStorage.setItem("cpf", input_cpf.value);
+            localStorage.setItem("banco", input_banco.value);
+
+            window.location.href = "index.html"
+        }
+
+        input_saldo.value = localStorage.getItem("saldo");
+        input_myName.value = localStorage.getItem("myName");
+        input_myCpf.value = localStorage.getItem("myCpf");
+        input_myBanco.value = localStorage.getItem("myBanco");
+
+        input_vitName.value = localStorage.getItem("vitName");
+        input_cpf.value = localStorage.getItem("cpf");
+        input_banco.value = localStorage.getItem("banco");
+
+    </script>
+
+</body>
+</html>

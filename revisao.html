@@ -16,7 +16,7 @@
                 <div class="volta" onclick="window.location.href='pixComChave2.html'"></div>
                 <div class="containerSaldo">
                     <p class="rs">R$</p>
-                    <p class="saldo">4,49</p>
+                    <p class="saldo" id="saldo">4,49</p>
                 </div>
                 <div class="containerPreco">
                     <p class="valorAPagar">Valor a pagar</p>
@@ -27,20 +27,20 @@
                 </div>
 
                 <div class="containerInformacoes">
-                    <p class="title">Chave de Celular</p>
-                    <p class="info">(24) 99842-8760</p>
+                    <p class="title" id="tipoDeChave">Chave de Celular</p>
+                    <p class="info" id="chave">(24) 99842-8760</p>
 
                     <p class="title">Nome</p>
-                    <p class="info">Ana Andreia Jerusaleno Mesquita</p>
+                    <p class="info" id="vitName">Ana Andreia Jerusaleno Mesquita</p>
 
                     <p class="title">CPF/CNPJ</p>
-                    <p class="info">***.858.957-**</p>
+                    <p class="info" id="cpf">***.858.957-**</p>
 
                     <p class="title">Instituição</p>
-                    <p class="info">Banco Inter S.A.</p>
+                    <p class="info" id="banco">Banco Inter S.A.</p>
 
                     <p class="title">Descrição</p>
-                    <p class="info">Não informado</p>
+                    <p class="info" id="descricao">Não informado</p>
                 </div>
 
             </main>
@@ -66,7 +66,9 @@
             }
         </script>
     
-    </body>
+        <script src="controller.js"></script>
+</body>
     
+    <script src="controller.js"></script>
 </body>
 </html>

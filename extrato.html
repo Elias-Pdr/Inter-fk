@@ -12,14 +12,14 @@
 
     <div class="voltar" onclick="window.location.href='index.html'"></div>
 
-    <p class="saldo">R$ 4,48</p>
+    <p class="saldo" id="saldo">R$ 4,48</p>
     <p class="mes">Dezembro</p>
-    <p class="saldoDoDia" >Saldo do dia <span class="saldo2">R$ 4,48</span></p>
+    <p class="saldoDoDia">Saldo do dia <span id="saldo2" class="saldo2">R$ 4,48</span></p>
     
     <div class="containerPix" onclick="window.location.href='comprovante.html'">
         <p class="title">Pix enviado</p>
-        <p class="valor">-R$ 0,01</p>
-        <p class="nome">Ana Andreia Jerusaleno Mesquita</p>
+        <p class="valor" id="valor">-R$ 0,01</p>
+        <p class="nome" id="vitName">Ana Andreia Jerusaleno Mesquita</p>
     </div>
     
     <div class="credito">
@@ -39,6 +39,12 @@
         <p class="valor green">R$ 0,78</p>
         <p class="nome">Cartão de crédito</p>
     </div>
+
+    <script src="controller.js"></script>
+    <script>
+        document.getElementById("saldo").innerHTML = "R$ " + localStorage.getItem("saldo");
+        document.getElementById("saldo2").innerHTML = "R$ " + localStorage.getItem("saldo");
+    </script>
 
 </body>
 </html>

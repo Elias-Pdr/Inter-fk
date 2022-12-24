@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+:root{
+    --largura: 450px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    max-width: var(--largura);
+}
+body{
+    background-color: rgb(255, 255, 255);
+    width: var(--largura);
+    color: black;
+    font-family: 'Sora', sans-serif;
+}
+.guia{
+    width: var(--largura);
+    position: absolute;
+    z-index: -10;
+    opacity: 1;
+}
+img{
+    opacity: 1;
+}
+
+header img{
+    position: absolute;
+    z-index: 100;
+}
+header p{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 16px;
+}
+main{
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+}
+.containerSaldo{
+    margin: 57px 0px 0px 0px;
+    border: 1px solid #ddd;
+    padding: 14px;
+    border-radius: 10px;
+}
+.containerSaldo p:nth-child(1){
+    font-size: 10px;
+}
+#saldo{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+}
+.containerInput label{
+    font-size: 10px;
+    position: relative;
+    top: -8px;
+    left: 16px;
+    background-color: white;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+.containerInput input{
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px 10px 10px 10px;
+
+}
+.compartBtn{
+    padding: 15px 131px;
+    border: none;
+    background-color: #ff7a01;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    width: 100%;
+}

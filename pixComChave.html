@@ -28,7 +28,7 @@
                     <img id="radioNoCheck2" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck2" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs2" type="text" name="inputCpf" id="inputCpf" placeholder="CPF/CNPJ de quem irá receber">
+                <input class="inputs" id="inputs2" type="text" name="inputCpf" id="inputCpf" placeholder="Celular de quem irá receber">
             </div>
             <div class="contianerChave" onclick="radio('3')">
                 <span>
@@ -36,7 +36,7 @@
                     <img id="radioNoCheck3" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck3" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs3" type="text" name="inputCpf" id="inputCpf" placeholder="CPF/CNPJ de quem irá receber">
+                <input class="inputs" id="inputs3" type="text" name="inputCpf" id="inputCpf" placeholder="E-mail de quem irá receber">
             </div>
             <div class="contianerChave" onclick="radio('4')">
                 <span>
@@ -44,9 +44,11 @@
                     <img id="radioNoCheck4" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck4" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs4" type="text" name="inputCpf" id="inputCpf" placeholder="CPF/CNPJ de quem irá receber">
+                <input class="inputs" id="inputs4" type="text" name="inputCpf" id="inputCpf" placeholder="Chave Aleatória de quem irá receber">
             </div>
         </main>
+
+        <p id="chave"></p>
         
         <footer>
             <button onclick="window.location.href='pixComChave2.html'">continuar</button>
@@ -55,8 +57,23 @@
 
     <script src="controllerSizeImg.js"></script>
     <script>
+        let chave = localStorage.get("chave")
 
         function radio(number){
+            if (number == "1") {
+                chave = "Chave de CPF"
+            }
+            else if (number == "2") {
+                chave = "Chave de Celular"
+            }
+            else if (number == "3") {
+                chave = "Chave de E-mail"
+            }
+            else if (number == "4") {
+                chave = "Chave Aleatória"
+            }
+
+
             let iconsCheck = document.querySelectorAll(".check")
             let iconsNoCheck = document.querySelectorAll(".noCheck")
             let inputs = document.querySelectorAll(".inputs")
@@ -74,5 +91,6 @@
             
         }
     </script>
+    <script src="controller.js"></script>
 </body>
 </html>
