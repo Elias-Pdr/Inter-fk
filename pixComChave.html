@@ -20,7 +20,7 @@
                     <img id="radioNoCheck1" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck1" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs1" type="text" name="inputCpf" id="inputCpf" placeholder="CPF/CNPJ de quem irá receber">
+                <input maxlength="14"  oninput="atvBtn()" class="inputs" id="inputs1" type="text" placeholder="CPF/CNPJ de quem irá receber" onkeydown="fMasc( this, mCPF );">
             </div>
             <div class="contianerChave" onclick="radio('2')">
                 <span>
@@ -28,7 +28,7 @@
                     <img id="radioNoCheck2" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck2" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs2" type="text" name="inputCpf" id="inputCpf" placeholder="Celular de quem irá receber">
+                <input maxlength="16"  oninput="atvBtn()" class="inputs" id="inputs2" type="text"placeholder="Celular de quem irá receber" onkeydown="fMasc( this, mCelular );">
             </div>
             <div class="contianerChave" onclick="radio('3')">
                 <span>
@@ -36,7 +36,7 @@
                     <img id="radioNoCheck3" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck3" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs3" type="text" name="inputCpf" id="inputCpf" placeholder="E-mail de quem irá receber">
+                <input  oninput="atvBtn()" class="inputs" id="inputs3" type="text" placeholder="E-mail de quem irá receber">
             </div>
             <div class="contianerChave" onclick="radio('4')">
                 <span>
@@ -44,33 +44,49 @@
                     <img id="radioNoCheck4" class="imgSize noCheck" src="img/imgPixComChave/pixChave_0000_Camada-4.png" alt="">
                     <img id="radioCheck4" class="imgSize check" src="img/imgPixComChave/pixChave_0001_Camada-3.png" alt="">
                 </span>
-                <input class="inputs" id="inputs4" type="text" name="inputCpf" id="inputCpf" placeholder="Chave Aleatória de quem irá receber">
+                <input  oninput="atvBtn()" class="inputs" id="inputs4" type="text" placeholder="Chave Aleatória de quem irá receber">
             </div>
         </main>
 
-        <p id="chave"></p>
+        <p id="tipoDechave"></p>
         
         <footer>
-            <button onclick="window.location.href='pixComChave2.html'">continuar</button>
+            <button onclick="continuar()" id="btn">continuar</button>
         </footer>
     </div>
 
     <script src="controllerSizeImg.js"></script>
+    <script src="formatInput.js"></script>
     <script>
-        let chave = localStorage.get("chave")
+        let tipoDeChave = localStorage.getItem("tipoDeChave");
+
+        //setar os inputs entro de variaveis
+        let inpt_cpf = document.getElementById("inputs1")
+        let inpt_celular = document.getElementById("inputs2")
+        let inpt_email = document.getElementById("inputs3")
+        let inpt_aleatoria = document.getElementById("inputs4")
+
+        //ativer btn
+        
+        function atvBtn() {
+            document.getElementById("btn").style.color = "white"
+            document.getElementById("btn").style.backgroundImage = "linear-gradient(90deg, #ff520e, #ff8500)"
+        }
+
 
         function radio(number){
+
             if (number == "1") {
-                chave = "Chave de CPF"
+                tipoDeChave = "Chave de CPF"
             }
             else if (number == "2") {
-                chave = "Chave de Celular"
+                tipoDeChave = "Chave de Celular"
             }
             else if (number == "3") {
-                chave = "Chave de E-mail"
+                tipoDeChave = "Chave de E-mail"
             }
             else if (number == "4") {
-                chave = "Chave Aleatória"
+                tipoDeChave = "Chave Aleatória"
             }
 
 
@@ -89,6 +105,30 @@
             document.getElementById("radioNoCheck" + number).style.display = "none"
             document.getElementById("inputs" + number).style.display = "block"
             
+        }
+
+        function continuar() {
+            localStorage.setItem("tipoDeChave", tipoDeChave);
+            
+
+            //ler o input corespondente ao tipo de chave
+            if (tipoDeChave == "Chave de CPF") {
+                localStorage.setItem("chave", inpt_cpf.value);
+            }
+            else if(tipoDeChave == "Chave de Celular"){
+                localStorage.setItem("chave", inpt_celular.value);
+
+            }
+            else if(tipoDeChave == "Chave de E-mail"){
+                localStorage.setItem("chave", inpt_email.value);
+
+            }
+            else if(tipoDeChave == "Chave Aleatória"){
+                localStorage.setItem("chave", inpt_aleatoria.value);
+
+            }
+
+            window.location.href='pixComChave2.html'
         }
     </script>
     <script src="controller.js"></script>

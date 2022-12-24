@@ -54,7 +54,7 @@
             <span>
                 <div class="puxador"></div>
                 <p>Clique em confirmar para autenticar sua transição pelo iSafe</p>
-                <button class="button btnHover" onclick="window.location.href='comprovante.html'">confirmar</button>
+                <button class="button btnHover" onclick="confirmar()">confirmar</button>
             </span>
         </div>
     
@@ -64,8 +64,138 @@
             function pagar() {
                 document.querySelector(".iSafe").style.display = "flex"
             }
+            function confirmar() {
+            //salvar a data do pagamento
+            let dataCompleta = "Terça, 00/00/0000"
+            let horaTxt = "00h00"
+
+            localStorage.setItem("dataCompleta", dataCompleta);
+
+                const data = new Date();
+                let dia = data.getUTCDate()
+                let mes = data.getUTCMonth()+1
+                if (mes == 13) {
+                    mes = 1
+                }
+                let ano = data.getUTCFullYear()
+                let semana = data.getUTCDay()
+
+                if(dia < 10){
+                    dia = "0" + dia
+                }
+                if(mes < 10){
+                    mes = "0" + mes
+                }
+                
+                switch (semana) {
+                        case 0:
+                    semana = 'Domingo'
+                        break;
+
+                        case 1:
+                    semana = 'Segunda'
+                        break;
+
+                        case 2:
+                    semana = 'Terça'
+                        break;
+
+                        case 3:
+                    semana = 'Quarta'
+                        break;
+
+                        case 4:
+                    semana = 'Quinta'
+                        break;
+
+                        case 5:
+                    semana = 'Sexta'
+                        break;
+
+                        case 6:
+                    semana = 'Sábado'
+                        break;
+
+                }
+
+                let mesText = mes
+                switch (mesText) {
+                        case 1:
+                    mesText = 'Janeiro'
+                        break;
+
+                        case 2:
+                    mesText = 'Fevereiro'
+                        break;
+
+                        case 3:
+                    mesText = 'Março'
+                        break;
+
+                        case 4:
+                    mesText = 'Abril'
+                        break;
+
+                        case 5:
+                    mesText = 'Maio'
+                        break;
+
+                        case 6:
+                    mesText = 'Junho'
+                        break;
+
+                        case 7:
+                    mesText = 'Julho'
+                        break;
+
+                        case 8:
+                    mesText = 'Agosto'
+                        break;
+
+                        case 9:
+                    mesText = 'Setembro'
+                        break;
+
+                        case 10:
+                    mesText = 'Outubro'
+                        break;
+
+                        case 11:
+                    mesText = 'Novembro'
+                        break;
+
+                        case 12:
+                    mesText = 'Dezembro'
+                        break;
+
+                }
+
+                dataCompleta = semana + ', ' + dia + "/" + mes +  "/" + ano
+
+                localStorage.setItem("dataCompleta", dataCompleta);
+                localStorage.setItem("mes", mesText);
+
+
+
+                //salvar a hora do pagamento
+                let hora = data.getHours()
+                let minutos = data.getUTCMinutes()
+
+
+                localStorage.setItem("hora", hora + 'h' + minutos);
+
+
+                //Descontar do meu saldo
+                let saldo = localStorage.getItem("saldo")
+                let valor = localStorage.getItem("valor")
+
+
+                localStorage.setItem("saldo", (saldo - valor).toFixed(2))
+
+                window.location.href='comprovante.html'
+
+            }
         </script>
-    
         <script src="controller.js"></script>
 </body>
     

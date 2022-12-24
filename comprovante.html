@@ -7,7 +7,7 @@
     <title>comprovante</title>
     <link rel="stylesheet" href="comprovante.css">
 </head>
-<body onload="start()">
+<body>
     <img class="guia" src="img/imgComprovante/guia1.png" alt=""> 
 
     <header>
@@ -39,5 +39,8 @@
     <footer><button class="compartBtn">Compartilhar comprovante</button></footer>
 
     <script src="controller.js"></script>
+    <script>
+        document.getElementById("valor").innerHTML = 'R$ ' + document.getElementById("valor").innerHTML.replace('.', ',')
+    </script>
 </body>
 </html>

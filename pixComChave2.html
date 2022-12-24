@@ -21,7 +21,7 @@
                 <p class="valorAPagar">Valor a pagar</p>
                 <span class="containerInputPreco">
                     <label for="valor" class="rsInput">R$</label>
-                    <input class="input" type="number" name="valor" id="valor" placeholder="0,00">
+                    <input oninput="atvBtn()" class="input" type="number" name="valor" id="valor" placeholder="0,00">
                 </span>
             </div>
             <div class="containerDescrisao">
@@ -29,14 +29,39 @@
                 <input type="text" name="descricao" id="descricao" placeholder="Pagamento">
             </div>
         </main>
+
+
         <footer>
-            <button onclick="window.location.href='revisao.html'">continuar</button>
+            <button onclick="continuar()" id="btn">continuar</button>
         </footer>
     </div>
 
 
     <script src="controllerSizeImg.js"></script>
-
     <script src="controller.js"></script>
+    <script>
+        let inputValor = document.getElementById("valor")
+        let inputDescricao = document.getElementById("descricao")
+
+        function atvBtn() {
+            document.getElementById("btn").style.color = "white"
+            document.getElementById("btn").style.backgroundImage = "linear-gradient(90deg, #ff520e, #ff8500)"
+        }
+
+
+        function continuar() {
+            //salvar os inputs no localStorage
+
+            localStorage.setItem("valor", inputValor.value);
+            if (inputDescricao.value != '') {
+                localStorage.setItem("descricao", inputDescricao.value); 
+            }else{
+                localStorage.setItem("descricao", "Não informado"); 
+            }
+            
+
+            window.location.href='revisao.html'
+        }
+    </script>
 </body>
 </html>

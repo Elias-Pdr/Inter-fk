@@ -13,7 +13,7 @@
     <div class="voltar" onclick="window.location.href='index.html'"></div>
 
     <p class="saldo" id="saldo">R$ 4,48</p>
-    <p class="mes">Dezembro</p>
+    <p class="mes" id="mes">Dezembro</p>
     <p class="saldoDoDia">Saldo do dia <span id="saldo2" class="saldo2">R$ 4,48</span></p>
     
     <div class="containerPix" onclick="window.location.href='comprovante.html'">
@@ -44,6 +44,11 @@
     <script>
         document.getElementById("saldo").innerHTML = "R$ " + localStorage.getItem("saldo");
         document.getElementById("saldo2").innerHTML = "R$ " + localStorage.getItem("saldo");
+    </script>
+
+    <script>
+        document.getElementById("saldo").innerHTML = document.getElementById("saldo").innerHTML.replace('.', ',')
+        document.getElementById("valor").innerHTML = '-R$ ' + document.getElementById("valor").innerHTML.replace('.', ',')
     </script>
 
 </body>

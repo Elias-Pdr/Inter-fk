@@ -48,7 +48,7 @@
     <script src="controllerSizeImg.js"></script>
     <script src="controller.js"></script>
     <script>
-        document.getElementById("saldo").innerHTML = "R$ " + localStorage.getItem("saldo");
+        document.getElementById("saldo").innerHTML = "R$ " + localStorage.getItem("saldo").replace('.', ',');
     </script>
 </body>
 
