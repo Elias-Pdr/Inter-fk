@@ -5,50 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
+
 </head>
 <body>
     <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
     <button onclick="fatiar()">Fatiar</button>
-    <p id="txt1"></p>
-    <p id="txt2"></p>
-    <p id="txt3"></p>
-    <p id="txt4"></p>
-    <p id="txt5"></p>
+    <p id="txt1" class="txt">Nome:</p>
+    <p id="txt2" class="txt">Cpf:</p>
+    <p id="txt3" class="txt">Banco:</p>
 
     <script>
         function fatiar() {
             let txt1 = document.getElementById('txt1')
             let txt2 = document.getElementById('txt2')
             let txt3 = document.getElementById('txt3')
-            let txt4 = document.getElementById('txt5')
-            let txt5 = document.getElementById('txt6')
+            let txt4 = document.getElementById('txt4')
+            let txt5 = document.getElementById('txt5')
 
             let textarea = document.getElementById('textarea')
             let stringCompleta = textarea.value
 
-            let nameFat = stringCompleta.slice(0 ,stringCompleta.indexOf('CPF'));
-            txt1.innerHTML = nameFat
+            let nameFat = stringCompleta.slice(0 ,stringCompleta.indexOf('*'));
+            txt1.innerHTML = nameFat.toUpperCase();
 
-            let stringFatiada1 = stringCompleta.replace(nameFat, '').replace('CPF/CNPJ', '').replace('***.', '')
+            let stringFat = stringCompleta.replace(nameFat ,'').replace('***.' ,'').replace('***' ,'').replace('-**' ,'');
 
-            let stringFatiada2 = stringCompleta.slice(stringCompleta.indexOf('*') ,stringCompleta.indexOf('-'));
+            let cpfFat = stringFat.slice(0 ,7);
+            txt2.innerHTML = cpfFat;
 
-            let cpfFat = stringFatiada2.slice(stringFatiada2.indexOf('*') + 4);
-            txt2.innerHTML = cpfFat
+            let bancoFat = stringFat.replace(cpfFat ,'')
+            txt3.innerHTML = bancoFat;
 
-            let bancoFat = stringFatiada1.replace(cpfFat, '').replace('-**', '').replace('Instituição', '') 
-            txt4.innerHTML = bancoFat
-
+            localStorage.setItem("vitName", nameFat)
+            localStorage.setItem("cpf", cpfFat)
+            localStorage.setItem("banco", bancoFat)
             /*
-            Ana Andreia Jerusaleno Mesquita
+                ANA ANDREIA JERUSALENO MESQUITA
 
-            CPF/CNPJ
-
-            ***.858.957-**
-
-            Instituição Banco Inter S.A.
-
-            */
+                ***858.957-** BANCO INTER
+           */
         }
     </script>
 </body>

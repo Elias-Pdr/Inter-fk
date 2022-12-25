@@ -13,10 +13,17 @@
         <p>ADM</p>
     </header>
     <main>
+        
         <div class="containerSaldo">
             <p>Total em conta</p>
             <input type="number" name="saldo" id="saldo" placeholder="R$ 0,00">
         </div>
+
+        <div class="containerFat">
+            <input type="text" name="textarea" id="textarea">
+            <button onclick="fatiar()" id="btnFatiar">Fatiar</button>
+        </div>
+    
 
         <div class="containerInput">
             <label for="myName">Meu nome</label>
@@ -79,15 +86,41 @@
 
             window.location.href = "index.html"
         }
+        atualizarDados()
+        function atualizarDados(){
+            input_saldo.value = localStorage.getItem("saldo");
+            input_myName.value = localStorage.getItem("myName");
+            input_myCpf.value = localStorage.getItem("myCpf");
+            input_myBanco.value = localStorage.getItem("myBanco");
 
-        input_saldo.value = localStorage.getItem("saldo");
-        input_myName.value = localStorage.getItem("myName");
-        input_myCpf.value = localStorage.getItem("myCpf");
-        input_myBanco.value = localStorage.getItem("myBanco");
+            input_vitName.value = localStorage.getItem("vitName");
+            input_cpf.value = localStorage.getItem("cpf");
+            input_banco.value = localStorage.getItem("banco");
+        }
 
-        input_vitName.value = localStorage.getItem("vitName");
-        input_cpf.value = localStorage.getItem("cpf");
-        input_banco.value = localStorage.getItem("banco");
+        function fatiar() {
+
+            let textarea = document.getElementById('textarea')
+            let stringCompleta = textarea.value
+
+            let nameFat = stringCompleta.slice(0 ,stringCompleta.indexOf('*'));
+
+            let stringFat = stringCompleta.replace(nameFat ,'').replace('***.' ,'').replace('***' ,'').replace('-**' ,'');
+
+            let cpfFat = stringFat.slice(0 ,7);
+
+            let bancoFat = stringFat.replace(cpfFat ,'')
+
+            localStorage.setItem("vitName", nameFat)
+            localStorage.setItem("cpf", cpfFat)
+            localStorage.setItem("banco", bancoFat)
+            atualizarDados()
+            /*
+                PEDRO ELIAS JERUSALENO CALABIANQUI
+
+                ***858.957-** BANCO INTER
+           */
+        }
 
     </script>
 
