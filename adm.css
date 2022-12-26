@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
-:root{
-    --largura: 450px;
-}
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    max-width: var(--largura);
-}
-body{
-    background-color: rgb(255, 255, 255);
-    width: var(--largura);
-    color: black;
-    font-family: 'Sora', sans-serif;
-}
-.guia{
-    width: var(--largura);
-    position: absolute;
-    z-index: -10;
-    opacity: 1;
-}
-img{
-    opacity: 1;
-}
-
 header img{
     position: absolute;
     z-index: 100;

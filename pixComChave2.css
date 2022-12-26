@@ -1,19 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
-:root{
-    --largura: 450px;
-}
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    max-width: var(--largura);
-}
-body{
-    background-color: rgb(110, 3, 3);
-    width: var(--largura);
-    color: black;
-    font-family: 'Sora', sans-serif;
-}
+ 
+ 
 .main{
     height: 913px;
     display: flex;
@@ -21,12 +7,7 @@ body{
     justify-content: space-between;
 }
 
-.guia{
-    width: var(--largura);
-    position: absolute;
-    z-index: -1;
-    opacity: 1;
-}
+ 
 .volta{
     width: 60px;
     height: 60px;

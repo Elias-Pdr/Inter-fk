@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>comprovante</title>
     <link rel="stylesheet" href="comprovante.css">
+    <link rel="stylesheet" href="controllerStyle.css">
+
+
 </head>
-<body>
+<body onload="start()" class= "body">
     <img class="guia" src="img/imgComprovante/guia1.png" alt=""> 
 
     <header>
@@ -39,6 +42,8 @@
     <footer><button class="compartBtn">Compartilhar comprovante</button></footer>
 
     <script src="controller.js"></script>
+    <script src="controllerSizeImg.js"></script>
+
     <script>
         document.getElementById("valor").innerHTML = 'R$ ' + document.getElementById("valor").innerHTML.replace('.', ',')
     </script>
