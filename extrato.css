@@ -14,7 +14,7 @@ body{
     color: black;
     font-family: 'Sora', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(161, 159, 21);
+    color: rgb(21, 145, 161);
 }
 .guia{
     width: var(--largura);
@@ -33,25 +33,25 @@ img{
 }
 .saldo{
     margin: 163px 0px 99px 40px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     font-family: 'Sora', sans-serif;
 
 }
 .mes{
     margin: -2px 5px 14px 23px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 
 }
 .saldoDoDia{
     margin: 18px 25px 2px 0px;
-    font-size: 10px;
+    font-size: 11px;
     text-align: end;
     font-family: Arial, Helvetica, sans-serif;
 }
 .saldo2{
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
 }
 .containerPix,
@@ -65,18 +65,18 @@ img{
 }
 .title{
     margin: 0px 0px 0px 0px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
 }
 .valor{
     margin: 0px 0px 0px 0px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     opacity: .9;
 }
 .nome{
     margin: 0px 0px 0px 0px;
-    font-size: 11px;
+    font-size: 12px;
     opacity: .8;
 }
 .green{
