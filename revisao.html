@@ -66,20 +66,40 @@
             document.querySelector(".iSafe").style.display = "flex"
         }
         function confirmar() {
+
+
+        //salvar a hora do pagamento
+        const data = new Date();
+
+            let hora = data.getHours()
+            let minutos = data.getMinutes()
+
+            if(hora < 10){
+                hora = "0" + hora
+            }
+            
+            if(minutos < 10){
+                minutos = "0" + minutos
+            }
+                
+            localStorage.setItem("hora", hora + 'h' + minutos);
+            
+
         //salvar a data do pagamento
-        let dataCompleta = "Terça, 00/00/0000"
-        let horaTxt = "00h00"
+            let dataCompleta = "Terça, 00/00/0000"
+            let horaTxt = "00h00"
 
-        localStorage.setItem("dataCompleta", dataCompleta);
+            localStorage.setItem("dataCompleta", dataCompleta);
 
-            const data = new Date();
             let dia = data.getUTCDate()
             let mes = data.getUTCMonth()+1
+
             if (mes == 13) {
                 mes = 1
             }
-            let ano = data.getUTCFullYear()
-            let semana = data.getUTCDay()
+
+            let ano = data.getFullYear()
+            let semana = data.getDay()
 
             if(dia < 10){
                 dia = "0" + dia
@@ -171,26 +191,15 @@
 
             }
 
+            if (hora >= 20) {
+                dia = dia-1
+            }
+
             dataCompleta = semana + ', ' + dia + "/" + mes +  "/" + ano
 
             localStorage.setItem("dataCompleta", dataCompleta);
             localStorage.setItem("mes", mesText);
 
-
-
-            //salvar a hora do pagamento
-            let hora = data.getHours()
-            let minutos = data.getUTCMinutes()
-
-            if(hora < 10){
-                hora = "0" + hora
-            }
-            
-            if(minutos < 10){
-                minutos = "0" + minutos
-            }
-                
-            localStorage.setItem("hora", hora + 'h' + minutos);
 
 
             //Descontar do meu saldo
@@ -200,12 +209,11 @@
 
             localStorage.setItem("saldo", (saldo - valor).toFixed(2))
 
-            window.location.href='comprovante.html'
+            //window.location.href='comprovante.html'
 
         }
     </script>
     <script src="controller.js"></script>
     
-    <script src="controller.js"></script>
 </body>
 </html>

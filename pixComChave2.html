@@ -46,8 +46,6 @@
     <script>
         let inputValor = document.getElementById("valor")
         let inputDescricao = document.getElementById("descricao")
-        let contadorCaract = 0
-
 
 
         function atvBtn() {
@@ -59,7 +57,7 @@
         function continuar() {
             //salvar os inputs no localStorage
 
-            localStorage.setItem("valor", inputValor.value);
+            localStorage.setItem("valor", inputValor.value.replace(',', '.'));
             if (inputDescricao.value != '') {
                 localStorage.setItem("descricao", inputDescricao.value); 
             }else{

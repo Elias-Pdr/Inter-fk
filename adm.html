@@ -77,7 +77,7 @@
         let input_banco = document.getElementById("banco")
 
         function salvar() {
-            localStorage.setItem("saldo", input_saldo.value);
+            localStorage.setItem("saldo", input_saldo.value.replace(',', '.'));
             localStorage.setItem("myName", input_myName.value);
             localStorage.setItem("myCpf", input_myCpf.value);
             localStorage.setItem("myBanco", input_myBanco.value);

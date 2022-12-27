@@ -1,0 +1,91 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    padding: 0px 24px;
+    padding-top: 302px;
+}
+.containerName{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 0px 0px;
+    opacity: 1.5;
+    padding: 16px 0px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.containerAvatar{
+    color: white;
+    background-color: #6b6c71;
+    margin: 0px 16px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    border-radius: 50%;
+}
+#myName{
+    margin-top: 2px;
+    font-size: 18px;
+    color: black;
+}
+#myCpf{
+    margin-top: 2px;
+    font-size: 14px;
+    color: black;
+}
+.trocarBtn{
+    color: #ff7a01;
+    font-size: 12px;
+    margin: 0px 15px 0px 0px;
+    font-weight: 600;
+}
+.containerSenha{
+    margin: 14px 0px 0px 0px;
+}
+.senhaLable{
+    margin: 0px 0px 5px 0px;
+    font-size: 12px;
+}
+.containerInputSenha{
+    background-color: #f5f6fa;
+    border-radius: 8px;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+}
+#senha{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0px 16px;
+}
+.containerBtn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+.btnSenha{
+    background-color: #ff7a01;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    padding: 14px;
+}
+#btnEsqueci{
+    margin-top: 18px;
+    background: none;
+    color: #ff7a01;
+
+}
