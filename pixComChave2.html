@@ -24,7 +24,7 @@
                 <p class="valorAPagar">Valor a pagar</p>
                 <span class="containerInputPreco">
                     <label for="valor" class="rsInput">R$</label>
-                    <input oninput="atvBtn()" class="input" type="number" name="valor" id="valor" placeholder="0,00">
+                    <input onkeydown="fMasc( this, mValor );" class="input" type="text" name="valor" id="valor" placeholder="0,00">
                 </span>
             </div>
             <div class="containerDescrisao">
@@ -42,9 +42,13 @@
 
     <script src="controllerSizeImg.js"></script>
     <script src="controller.js"></script>
+    <script src="formatInput.js"></script>
     <script>
         let inputValor = document.getElementById("valor")
         let inputDescricao = document.getElementById("descricao")
+        let contadorCaract = 0
+
+
 
         function atvBtn() {
             document.getElementById("btn").style.color = "white"
