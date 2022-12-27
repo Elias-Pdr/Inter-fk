@@ -22,8 +22,6 @@ header{
 .containerValor{
     text-align: center;
     margin: 125px 0px 10px 0px;
-    font-size: 19px;
-    font-weight: bold;
 }
 .containerinfos,
 .containerinfos2{
@@ -55,4 +53,9 @@ footer{
 }
 #dataCompleta {
     padding-top: 3px;
+}
+#valor{
+    color: #ff7a01;
+    font-size: 19px;
+    font-weight: bold;
 }
