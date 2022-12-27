@@ -14,7 +14,7 @@ body{
     color: black;
     font-family: 'Sora', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(223, 6, 71);
+    color: rgb(11, 150, 6);
 }
 .guia{
     width: var(--largura);
@@ -39,8 +39,8 @@ img{
 
 }
 .mes{
-    margin: -2px 5px 14px 23px;
-    font-size: 18px;
+    margin: -2px 5px 15px 23px;
+    font-size: 19px;
     font-weight: 600;
 
 }
@@ -84,5 +84,5 @@ img{
     color: green;
 }
 .cash{
-    margin-top: 38px;
+    margin-top: 40px;
 }
