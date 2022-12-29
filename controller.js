@@ -11,9 +11,7 @@ if (document.getElementById("myName")){
 if (document.getElementById("myCpf")){
     document.getElementById("myCpf").innerHTML = localStorage.getItem("myCpf");
 }
-if (document.getElementById("myBanco")){
-    document.getElementById("myBanco").innerHTML = localStorage.getItem("myBanco");
-}
+
 
 
 //infos da vitima

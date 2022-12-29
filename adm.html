@@ -37,12 +37,10 @@
             <input type="text" name="myCpf" id="myCpf">
         </div>
 
-        <div class="containerInput">
-            <label for="myBanco">Meu banco</label>
-            <input type="text" name="myBanco" id="myBanco">
-        </div>
+
         <br>
         <br>
+
         <div class="containerInput">
             <label for="nome">Nome da vitima</label>
             <input type="text" name="vitName" id="vitName">
@@ -70,7 +68,6 @@
         let input_saldo = document.getElementById("saldo")
         let input_myName = document.getElementById("myName")
         let input_myCpf = document.getElementById("myCpf")
-        let input_myBanco = document.getElementById("myBanco")
 
         let input_vitName = document.getElementById("vitName")
         let input_cpf = document.getElementById("cpf")
@@ -80,7 +77,6 @@
             localStorage.setItem("saldo", input_saldo.value.replace(',', '.'));
             localStorage.setItem("myName", input_myName.value);
             localStorage.setItem("myCpf", input_myCpf.value);
-            localStorage.setItem("myBanco", input_myBanco.value);
 
             localStorage.setItem("vitName", input_vitName.value);
             localStorage.setItem("cpf", input_cpf.value);
@@ -93,7 +89,6 @@
             input_saldo.value = localStorage.getItem("saldo");
             input_myName.value = localStorage.getItem("myName");
             input_myCpf.value = localStorage.getItem("myCpf");
-            input_myBanco.value = localStorage.getItem("myBanco");
 
             input_vitName.value = localStorage.getItem("vitName");
             input_cpf.value = localStorage.getItem("cpf");

@@ -26,17 +26,26 @@ header{
 .containerinfos,
 .containerinfos2{
     text-align: end;
-    margin: 91px 24px;
+    margin: 0px 24px;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+.containerinfos{
+    margin-top: 85px;
+}
+.containerinfos2{
+    margin-top: 0px;
+    margin-bottom: 64px;
+
+}
+.containerinfosMeio{
+    margin-top: 110px;
+    margin-bottom: 64px;
+}
 .containerinfos p,
 .containerinfos2 p{
         margin-bottom: 19px;
-}
-.containerinfos{
-    margin-bottom: 135px;
 }
 footer{
     text-align: center;
@@ -57,4 +66,12 @@ footer{
 #valor{
     font-size: 22px;
     font-weight: bold;
+}
+.containerSpan{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    color: black;
+    opacity: .8;
 }
