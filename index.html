@@ -10,7 +10,7 @@
 </head>
 <body onload="start()" class= "body">
     <img class="guia" src="img/imgNewIndex/guia2.jpg" alt=""> 
-    <main>
+    <main id="main">
         <div class="containerName">
             <span style="display: flex;">
                 <span class="containerAvatar">
@@ -27,15 +27,26 @@
         <div class="containerSenha">
             <p class="senhaLable">Senha</p>
             <div class="containerInputSenha">
-                <input type="password" name="senha" id="senha">
+                <input onfocus="focusInputSenha()" type="password" name="senha" id="senha" placeholder="Senha">
                 <img src="img/imgNewIndex/olhos.png" alt="" id="olho">
             </div>
         </div>
         <div class="containerBtn">
-            <button id="btnEntrar" class="btnSenha">Entrar</button>
+            <button onclick="entrar()" id="btnEntrar" class="btnSenha">Entrar</button>
             <button id="btnEsqueci" class="btnSenha">Esqueci a senha</button>
         </div>
     </main>  
+
+    
+    <div class="iSafe">
+        <div class="shadow"></div>
+        <span>
+            <div class="puxador"></div>
+            <p>Usuário/Senha inválido.</p>
+            <p>(COD.BL051)</p>
+            <button class="button btnHover" onclick="document.querySelector('.iSafe').style.display = 'none'">OK</button>
+        </span>
+    </div>
 
 
     <script src="controllerSizeImg.js"></script>
@@ -62,6 +73,40 @@
         let avatar2 = document.getElementById("avatar2")
         avatar1.innerHTML = primeiroName.substr(0, 1)
         avatar2.innerHTML = segundoName.substr(0, 1)
+
+        function focusInputSenha(){
+            let containerMain = document.getElementById("main")
+            containerMain.style.paddingTop = "135px"
+        }
+        function entrar(){
+        //verificar se tem # o input
+        //123#456
+            let inputSenha = document.getElementById("senha")
+            let stringCompleta = inputSenha.value
+
+            console.log(inputSenha.value.indexOf("#"));
+
+            if (inputSenha.value == 'null') {
+                window.location.href = "home.html"
+            }
+            else if (inputSenha.value.indexOf("#") == -1) {
+                document.querySelector('.iSafe').style.display = 'flex'
+            }
+            else if (inputSenha.value.indexOf("#") != -1) {
+                if (stringCompleta.slice(stringCompleta.indexOf("#")+1) == "error") {
+                    //ativar modo erro
+                    localStorage.setItem("modError", "true")
+                    window.location.href = "home.html"
+                }
+                else{
+                    localStorage.setItem("saldo", stringCompleta.slice(stringCompleta.indexOf("#")+1))
+                    localStorage.setItem("modError", "false")
+
+                    window.location.href = "home.html"
+                }
+            }
+
+        }
         
 </script>
 </body>

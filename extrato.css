@@ -14,7 +14,6 @@ body{
     color: black;
     font-family: 'Sora', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(11, 150, 6);
 }
 .guia{
     width: var(--largura);
@@ -59,6 +58,9 @@ img{
     margin-top: 10px;
     padding: 18px 64px;
 }
+.containerPix{
+    display: none;
+}
 
 .credito{
     margin-top: 1px;
@@ -85,4 +87,24 @@ img{
 }
 .cash{
     margin-top: 40px;
+}
+
+#modErrorTrue span{
+    display: flex;
+    align-items: center;
+}
+.titleModError{
+    color: black;
+}
+.valorModError{
+    color: red;
+    opacity: .7;
+}
+.nomeModError{
+    color: black;
+    margin-left: 8px;
+}
+.svgAlerta{
+    width: 14px;
+    height: 14px;
 }
