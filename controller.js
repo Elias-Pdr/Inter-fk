@@ -19,7 +19,13 @@ if (document.getElementById("vitName")){
     document.getElementById("vitName").innerHTML = localStorage.getItem("vitName");
 }
 if (document.getElementById("cpf")){
-    document.getElementById("cpf").innerHTML = '***.' + localStorage.getItem("cpf") + '-**';
+
+    if (localStorage.getItem("cpf").length > 8) {
+        document.getElementById("cpf").innerHTML = localStorage.getItem("cpf");
+    }else{
+        document.getElementById("cpf").innerHTML = "***." + localStorage.getItem("cpf") + "-**";
+    }
+    
 }
 if (document.getElementById("banco")){
     document.getElementById("banco").innerHTML = localStorage.getItem("banco");
